@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WebGISAPP</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_search">搜索</string>
+</resources>
