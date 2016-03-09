@@ -23,7 +23,7 @@ import org.json.JSONObject;
 /**
  * @author ywq
  * @className WebViewInterface
- * @description webview js与andorid交互接口
+ * @description webview javascript与arcgis andorid交互接口
  * @date 2016-03-08
  * @time 16:21
  */
