@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- meta使用viewport以确保页面可自由缩放 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 引入 jQuery Mobile 样式 -->
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<!-- 引入 jQuery 库 -->
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- 引入 jQuery Mobile 库 -->
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>HTML5测试页面</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <input type="button" value="定位到苏州" onclick="javaToJs(strPositong)">
+  </div>
+</div> 
+
+<script type="text/javascript">
+var positon = {
+    lat: '31.3005001173',
+    lon: '120.5790059003',
+    name:'suzhou'
+};
+
+var strPositong='31.3005001173,120.5790059003';
+
+ function javaToJs(toast) {
+ 	    alert(toast);
+        Android.jsTojava(toast);
+    }
+</script>
+</body>
+</html>
