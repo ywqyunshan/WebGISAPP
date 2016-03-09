@@ -17,6 +17,7 @@ public class SysConstant {
     //WGS 84 经纬度坐标转米制坐标
     Point p=  CoordinateConversion.degreesDecimalMinutesToPoint(string,SpatialReference.create(SpatialReference.WKID_WGS84_WEB_MERCATOR_AUXILIARY_SPHERE));
     public static  Point CenterPoint=p;*/
+
     //weburl地址，可放置indexjq.html文件到本地
     public final static String webUrl="http://192.168.0.107/mobilegis/jqueyjs/indexjq.html";
 
