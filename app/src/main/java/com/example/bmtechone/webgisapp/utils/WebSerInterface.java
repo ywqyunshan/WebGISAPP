@@ -46,60 +46,27 @@ public class WebSerInterface {
      */
     @JavascriptInterface
     public void jsTojava(String s) {
-
-        Point p= CoordinateConversion.degreesDecimalMinutesToPoint(s, SpatialReference.create(SpatialReference.WKID_WGS84_WEB_MERCATOR_AUXILIARY_SPHERE));
-        mMapView.zoomToScale(p, 288895);
+        Toast.makeText(mContext,s,Toast.LENGTH_LONG).show();
+        //Point p= CoordinateConversion.degreesDecimalMinutesToPoint(s, SpatialReference.create(SpatialReference.WKID_WGS84_WEB_MERCATOR_AUXILIARY_SPHERE));
+       /* mMapView.zoomToScale(p, 288895);
         GraphicsLayer graphicsLayer=new GraphicsLayer();
         PictureMarkerSymbol markerSymbol= null;
         try {
-            markerSymbol = new PictureMarkerSymbol(ContextCompat.getDrawable(mContext, R.drawable.ic_postion));
+            markerSymbol = new PictureMarkerSymbol(ContextCompat.getDrawable(mContext, R.drawable.ic_car));
         } catch (Exception e) {
             e.printStackTrace();
         }
         Graphic graphic=new Graphic(p,markerSymbol);
         graphicsLayer.addGraphic(graphic);
-        mMapView.addLayer(graphicsLayer);
+        mMapView.addLayer(graphicsLayer);*/
         //Toast.makeText(mContext, s, Toast.LENGTH_SHORT).show();
     }
 
     /**
      * java 将数据传给js  通过loadUrl()调用 js方法
      */
-    public void javaToJs() {
-        mWebWiew.loadUrl("javascript:iniData('" + inidata() + "')");
+    public void javaToJs(String s ) {
+        mWebWiew.loadUrl("javascript:geoData('" +s + "')");
     }
-    /**
-     * 初始化数据
-     * @return
-     */
-    public String inidata() {
-        try {
-            //封装json对象
-            JSONObject jsonObject = new JSONObject();
-            jsonObject.put("name", "zhangsan");
-            jsonObject.put("sex", "男");
-            jsonObject.put("age","16");
 
-            JSONObject jsonObject1 = new JSONObject();
-            jsonObject1.put("name", "lisi");
-            jsonObject1.put("sex", "男");
-            jsonObject1.put("age","25");
-
-            JSONObject jsonObject2  = new JSONObject();
-            jsonObject2.put("name", "wangwu");
-            jsonObject2.put("sex", "男");
-            jsonObject2.put("age","26");
-
-            JSONArray array = new JSONArray();
-            array.put(jsonObject);
-            array.put(jsonObject1);
-            array.put(jsonObject2);
-            android.util.Log.d("log",array.toString());
-            return array.toString();
-        } catch (JSONException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return "";
-    }
 }

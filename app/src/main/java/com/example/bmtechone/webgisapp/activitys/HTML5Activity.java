@@ -12,7 +12,7 @@ import com.example.bmtechone.webgisapp.R;
 import com.example.bmtechone.webgisapp.utils.SysConstant;
 import com.example.bmtechone.webgisapp.utils.WebSerInterface;
 
-public class HTLM5Activity extends AppCompatActivity {
+public class HTML5Activity extends AppCompatActivity {
 
 
      WebView mwebView;

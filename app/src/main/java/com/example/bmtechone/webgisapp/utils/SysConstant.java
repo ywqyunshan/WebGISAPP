@@ -19,6 +19,16 @@ public class SysConstant {
     public static  Point CenterPoint=p;*/
 
     //weburl地址，可放置indexjq.html文件到本地
-    public final static String webUrl="http://192.168.0.107/mobilegis/jqueyjs/indexjq.html";
+    public final static String webUrl="http://192.168.5.3/mobilegis/jqueyjs/spatialquery.html";
+    //图层url
+    public final static String tileUrl="http://www.gistech.com.cn/ArcGIS/rest/services/ChinaOnlineCommunity_Mobile/MapServer";
+    //要素图层url
+    public final static String preUrl="http://www.gistech.com.cn/ArcGIS/rest/services/Presales/ShangHai_Village/MapServer";
+    //上海坐标
+    public final static String string = "31.361310,121.434339";
+    //地图缩放比例尺
+    public final static Double mapscale=1000.0;
+    //WGS84坐标系标识
+    public  final  static int WGS84=4326;
 
 }
